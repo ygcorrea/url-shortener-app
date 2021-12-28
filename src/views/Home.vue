@@ -218,8 +218,7 @@ export default {
       const receivedID = data.id;
       axios
         .delete(`http://localhost:3000/urls/${receivedID}`)
-        .then((res) => {
-          console.log(res);
+        .then(() => {
           const itemIndex = this.listOfUrls.findIndex((p) => p.id === data.id);
           this.listOfUrls.splice(itemIndex, 1);
         })

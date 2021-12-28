@@ -97,8 +97,7 @@ export default {
         },
       };
       axios(registerBody)
-        .then((res) => {
-          console.log("data", res.data);
+        .then(() => {
           this.snackbar = true;
           this.text = "Cadastro realizado com sucesso";
         })
