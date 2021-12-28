@@ -111,6 +111,7 @@
           acesso.
         </p>
         <v-btn
+          to="/register"
           :x-small="$vuetify.breakpoint.smAndDown"
           dark
           class="secondary button pa-6 mb-7"
@@ -163,6 +164,7 @@ export default {
         this.shortUrl = response.data.shorturl;
         this.showGeneratedLink = true;
         this.saveUrlOnDB();
+        this.isCopied = false;
       });
     },
     saveUrlOnDB() {
