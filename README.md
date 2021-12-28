@@ -21,6 +21,10 @@ Uma REST API fake que utiliza json-server + autenticação JWT.
 ```
 cd ./api 
 ```
+- Instalar dependências
+```
+npm install
+```
 
 ### Rodar o comando abaixo para se registrar/logar na plataforma
 ```
