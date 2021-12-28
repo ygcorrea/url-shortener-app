@@ -1,24 +1,52 @@
-# url-shortener-app
 
-## Project setup
+# Url Shortener App
+
+Esse projeto é um encurtador de url que utiliza json-server para simular uma api REST. Além disso, é possível criar um usuário e se logar, para verificar as urls geradas pelo seu user e gerencia-las.
+
+## Como rodar o projeto - Front-end
+- Instalar dependências
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compila o projeto e o executa com hot-reload.
+- Rodar o projeto
 ```
 npm run serve
 ```
+## Como rodar o projeto - "Fake Back-end"
+Uma REST API fake que utiliza json-server + autenticação JWT. 
 
-### Compiles and minifies for production
+### Entrar na pasta da api
 ```
-npm run build
+cd ./api 
+```
+- Instalar dependências
+```
+npm install
 ```
 
-### Lints and fixes files
+### Rodar o comando abaixo para se registrar/logar na plataforma
 ```
-npm run lint
+npm run auth-start
 ```
+### Rodar o comando abaixo para startar o servidor
+```
+npm run start
+```
+## Como funciona o login/cadastro?
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Você pode se registrar/logar enviando um POST request para
+
+```
+POST http://localhost:8000/auth/login
+POST http://localhost:8000/auth/register
+```
+com os dados:
+
+```
+{
+  "email": "ygcorrea@email.com",
+  "password":"ygcorrea"
+}
+```
